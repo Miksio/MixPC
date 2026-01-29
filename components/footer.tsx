@@ -7,10 +7,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
-                <span className="text-xl font-bold text-primary-foreground">M</span>
-              </div>
-              <span className="text-xl font-bold text-secondary-foreground">MixPC</span>
+              <a href="/" className="flex items-center">
+                <img src="mixpc_logo.png" alt="MixPC" className="h-16 md:h-18 lg:h-20 object-contain" />
+              </a>
             </div>
             <p className="text-secondary-foreground/70 text-sm">
               Profesjonalny mobilny serwis komputerowy z dojazdem do klienta. 

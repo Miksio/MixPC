@@ -12,10 +12,9 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
-              <span className="text-xl font-bold text-primary-foreground">M</span>
-            </div>
-            <span className="text-xl font-bold text-secondary">MixPC</span>
+            <a href="/" className="flex items-center">
+                    <img src="mixpc_logo.png" alt="MixPC" className="h-16 md:h-18 lg:h-20 object-contain" />
+            </a>
           </div>
 
           <nav className="hidden md:flex items-center gap-6">
