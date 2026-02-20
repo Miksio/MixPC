@@ -1,6 +1,9 @@
+'use client'
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 export function Footer() {
+  const { t } = useLanguage()
   return (
     <footer className="bg-secondary py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -8,17 +11,16 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <a href="/" className="flex items-center">
-                <img src="mixpc_logo.png" alt="MixPC" className="h-16 md:h-18 lg:h-20 object-contain" />
+                <img src="mixpc_logo_f.png" alt="MixPC" className="h-16 md:h-16 lg:h-16" />
               </a>
             </div>
             <p className="text-secondary-foreground/70 text-sm">
-              Profesjonalny mobilny serwis komputerowy z dojazdem do klienta. 
-              Szybko, tanio i skutecznie.
+              {t.footer.description}
             </p>
           </div>
           
           <div>
-            <h3 className="font-semibold text-secondary-foreground mb-4">Kontakt</h3>
+            <h3 className="font-semibold text-secondary-foreground mb-4">{t.footer.contact}</h3>
             <ul className="space-y-3">
               <li>
                 <a href="tel:+48123456789" className="flex items-center gap-2 text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
@@ -42,49 +44,49 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="font-semibold text-secondary-foreground mb-4">Godziny pracy</h3>
+            <h3 className="font-semibold text-secondary-foreground mb-4">{t.footer.hours}</h3>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/70">
                 <Clock className="h-4 w-4" />
-                <span>Pn-Pt: 8:00-20:00</span>
+                <span>{t.footer.mondayToFriday}</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/70">
                 <Clock className="h-4 w-4" />
-                <span>Sobota: 9:00-16:00</span>
+                <span>{t.footer.saturday}</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/70">
                 <Clock className="h-4 w-4" />
-                <span>Niedziela: zamknięte</span>
+                <span>{t.footer.sunday}</span>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold text-secondary-foreground mb-4">Szybkie linki</h3>
+            <h3 className="font-semibold text-secondary-foreground mb-4">{t.footer.links}</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#uslugi" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Usługi
+                  {t.nav.services}
                 </a>
               </li>
               <li>
                 <a href="#cennik" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Cennik
+                  {t.nav.pricing}
                 </a>
               </li>
               <li>
                 <a href="#jak-dzialamy" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Jak działamy
+                  {t.nav.how}
                 </a>
               </li>
               <li>
                 <a href="#opinie" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Opinie
+                  {t.nav.testimonials}
                 </a>
               </li>
               <li>
                 <a href="#faq" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  FAQ
+                  {t.nav.faq}
                 </a>
               </li>
             </ul>
@@ -93,7 +95,7 @@ export function Footer() {
         
         <div className="border-t border-secondary-foreground/10 pt-8">
           <p className="text-center text-sm text-secondary-foreground/50">
-            © {new Date().getFullYear()} MixPC. Wszystkie prawa zastrzeżone.
+            {t.footer.copyright.replace("{year}", new Date().getFullYear().toString())}
           </p>
         </div>
       </div>

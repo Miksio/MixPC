@@ -1,37 +1,41 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Star, Quote } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 const testimonials = [
   {
-    name: "Anna Kowalska",
-    location: "Warszawa",
-    text: "Laptop nie włączał się od tygodnia. Pan przyjechał w godzinę, wymienił dysk i wszystko działa jak nowe. Polecam każdemu!",
+    name: "Zuzanna J.",
+    location: "Gdańsk",
+    text: "Laptop nie włączał się od tygodnia. Pan przyjechał w godzinę, wymienił dysk i wszystko działa jak nowe. Polecam.",
     rating: 5
   },
   {
-    name: "Marek Nowak",
-    location: "Kraków",
-    text: "Profesjonalna obsługa, uczciwe ceny. Odzyskali mi wszystkie zdjęcia z uszkodzonego dysku. Dziękuję!",
+    name: "Bartek K.",
+    location: "Gdynia",
+    text: "Nie byłem w stanie podłączyć drukarki do komputera. Jeden telefon i serwisant zdalnie podłączył się z moim laptopem i rozwiązał problem w niecałe 10 minut.",
     rating: 5
   },
   {
-    name: "Katarzyna Wiśniewska",
-    location: "Wrocław",
-    text: "Szybko, tanio i skutecznie. Mój komputer znowu chodzi jak rakieta po wymianie na SSD. Super kontakt!",
-    rating: 5
+    name: "Jędrzej S.",
+    location: "Gdańsk",
+    text: "Po wymianie dysku komputer chodzi na prawde szybko prawie mi spierdolił essa wariaty nie jestem AI. Rozsądna cena i super serwis.",
+    rating: 10
   }
 ]
 
 export function TestimonialsSection() {
+  const { t } = useLanguage()
   return (
     <section id="opinie" className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
-            Opinie klientów
+            {t.testimonials.title}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Zobacz, co mówią o nas nasi zadowoleni klienci
+            {t.testimonials.subtitle}
           </p>
         </div>
         

@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "services": "Services",
+    "how": "How it works",
+    "pricing": "Pricing",
+    "testimonials": "Testimonials",
+    "faq": "FAQ"
+  },
+  "call": {
+    "callNow": "Call now",
+    "phone": "+48 123 456 789"
+  },
+  "footer": {
+    "description": "Professional mobile computer service with on-site visits. Fast, affordable, and effective.",
+    "contact": "Contact",
+    "hours": "Opening hours",
+    "links": "Quick links",
+    "mondayToFriday": "Mon-Fri: 8:00-20:00",
+    "saturday": "Saturday: 9:00-16:00",
+    "sunday": "Sunday: closed",
+    "copyright": "© {{year}} MixPC. All rights reserved.",
+    "email": "kontakt@MixPC.pl",
+    "location": "Tricity, Poland"
+  },
+  "hero": {
+    "arrival": "Arrival within 60 minutes",
+    "titlePart1": "Mobile computer service with",
+    "titleHighlight": "on-site visits",
+    "subtitle": "We repair computers, laptops and phones. We come to your home or office. No stress, no queues, no need to leave your home.",
+    "seePricing": "See pricing",
+    "benefits": {
+      "freeEstimate": "Free estimate",
+      "warranty": "Repair warranty",
+      "payAfter": "Pay after repair"
+    }
+  },
+  "services": {
+    "title": "Our services",
+    "description": "We offer comprehensive repair and service of computer equipment. Everything with on-site visits.",
+    "items": {
+      "laptop": { "title": "Laptop repair", "description": "Screen, keyboard, battery replacement. Motherboard repairs." },
+      "computer": { "title": "Computer repair", "description": "Diagnostics, component replacement, hardware upgrades." },
+      "phone": { "title": "Phone repair", "description": "Screen replacement, battery, charging port." },
+      "virus": { "title": "Virus removal", "description": "System cleaning, antivirus installation, data protection." },
+      "os": { "title": "OS installation", "description": "Installation of Windows, Linux, macOS. Software setup." },
+      "build": { "title": "PC building", "description": "Component selection, assembly and setup of custom PC." }
+    }
+  },
+  "how": {
+    "title": "How it works",
+    "subtitle": "Three simple steps to a working device",
+    "steps": {
+      "1": { "title": "Call us", "description": "Describe the problem by phone or via WhatsApp. We will schedule a visit — often the same day!" },
+      "2": { "title": "We repair", "description": "We come to the address provided. We diagnose and repair on-site or take the device to the service." },
+      "3": { "title": "Done!", "description": "You receive the working device with warranty. You pay only after the repair — cash or card." }
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "description": "Clear prices without hidden costs. Final estimate always before repair.",
+    "cardTitle": "Sample prices",
+    "items": {
+      "diagnostics": { "service": "Computer diagnostics", "note": "free with repair" },
+      "install": { "service": "Windows installation", "note": "including configuration" },
+      "clean": { "service": "Laptop cleaning", "note": "thermal paste + cleaning" },
+      "virus": { "service": "Virus removal", "note": "full cleanup" },
+      "ssd": { "service": "SSD upgrade", "note": "without disk price" },
+      "repair": { "service": "Laptop repair", "note": "depending on fault" },
+      "travel": { "service": "On-site visit", "note": "depending on location" }
+    },
+    "askPrice": "Need a custom quote? Call us, we will help!",
+    "askButton": "Ask for price"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "See what our satisfied customers say"
+  },
+  "cta": {
+    "title": "Need help?",
+    "subtitle": "Call now and schedule a visit. We are available Monday to Saturday.",
+    "whatsapp": "Message on WhatsApp",
+    "schedule": "Mon-Fri: 8:00-20:00 | Sat: 9:00-16:00"
+  },
+  "faq": {
+    "items": {
+      "q1": { "question": "Do you issue invoices?", "answer": "Yes, we issue VAT invoices for companies and receipts for individual customers. Please inform us when arranging the visit." }
+    }
+  },
+  "serviceArea": {
+    "title": "Service area",
+    "description": "We travel to customers across the tricity. Most visits are scheduled the same or next working day.",
+    "items": {
+      "main": { "title": "Main city + surroundings", "description": "Gdańsk, Gdynia, Sopot and surroundings up to 30 km" },
+      "price": { "title": "Travel from 30 PLN", "description": "Travel cost depends on distance. Often free in the city center!" },
+      "express": { "title": "Express arrival", "description": "Urgent cases? Possible arrival within 1-2 hours of reporting." }
+    },
+    "map": {
+      "sopot": "Sopot",
+      "gdynia": "Gdynia",
+      "gdansk": "Gdańsk"
+    }
+  }
+}

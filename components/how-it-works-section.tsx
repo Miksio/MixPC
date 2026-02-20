@@ -1,36 +1,41 @@
-import { Phone, Wrench, ThumbsUp } from "lucide-react"
+"use client"
 
-const steps = [
-  {
-    number: "01",
-    icon: Phone,
-    title: "Zadzwoń do nas",
-    description: "Opisz problem telefonicznie lub przez WhatsApp. Ustalimy termin wizyty - często tego samego dnia!"
-  },
-  {
-    number: "02",
-    icon: Wrench,
-    title: "Naprawiamy",
-    description: "Przyjeżdżamy pod wskazany adres. Diagnozujemy i naprawiamy sprzęt na miejscu lub zabieramy do serwisu."
-  },
-  {
-    number: "03",
-    icon: ThumbsUp,
-    title: "Gotowe!",
-    description: "Odbierasz sprawny sprzęt z gwarancją. Płacisz dopiero po wykonanej naprawie - gotówką lub kartą."
-  }
-]
+import { Phone, Wrench, ThumbsUp } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 export function HowItWorksSection() {
+  const { t } = useLanguage()
+
+  const steps = [
+    {
+      number: "01",
+      icon: Phone,
+      title: t.how.steps["1"].title,
+      description: t.how.steps["1"].description
+    },
+    {
+      number: "02",
+      icon: Wrench,
+      title: t.how.steps["2"].title,
+      description: t.how.steps["2"].description
+    },
+    {
+      number: "03",
+      icon: ThumbsUp,
+      title: t.how.steps["3"].title,
+      description: t.how.steps["3"].description
+    }
+  ]
+
   return (
     <section id="jak-dzialamy" className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
-            Jak to działa?
+            {t.how.title}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Trzy proste kroki dzielą Cię od sprawnego sprzętu
+            {t.how.subtitle}
           </p>
         </div>
         
