@@ -64,7 +64,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <a href="/" className="flex items-center">
+            <a href="/MixPC/" className="flex items-center">
               <img src="mixpc_logo.png" alt="MixPC" className="h-14 w-auto object-contain" />
             </a>
           </div>
