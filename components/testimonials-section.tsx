@@ -20,8 +20,8 @@ const testimonials = [
   {
     name: "Jędrzej S.",
     location: "Gdańsk",
-    text: "Po wymianie dysku komputer chodzi na prawde szybko prawie mi spierdolił essa wariaty nie jestem AI. Rozsądna cena i super serwis.",
-    rating: 10
+    text: "Po wymianie dysku komputer chodzi na prawde szybko. Rozsądna cena i super serwis.",
+    rating: 5
   }
 ]
 

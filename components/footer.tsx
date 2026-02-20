@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <a href="/" className="flex items-center">
-                <img src="mixpc_logo_f.png" alt="MixPC" className="h-16 md:h-16 lg:h-16" />
+                <img src="mixpc_logo_f2.png" alt="MixPC" className="h-16 md:h-16 lg:h-16" />
               </a>
             </div>
             <p className="text-secondary-foreground/70 text-sm">
