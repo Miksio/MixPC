@@ -1,5 +1,5 @@
 'use client'
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Headphones, MessageCircle, Phone, Shield, Mail, MapPin } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function Footer() {
@@ -44,24 +44,31 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="font-semibold text-secondary-foreground mb-4">{t.footer.hours}</h3>
+            <h3 className="font-semibold text-secondary-foreground mb-4">{t.footer.availability}</h3>
+            <div className="flex items-center gap-3 mb-4 rounded-lg bg-primary/10 p-3">
+              <Headphones className="h-8 w-8 shrink-0 text-primary" />
+              <div>
+                <p className="text-sm font-semibold text-secondary-foreground">{t.footer.available247}</p>
+                <p className="text-xs text-secondary-foreground/60">{t.footer.available247Desc}</p>
+              </div>
+            </div>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/70">
-                <Clock className="h-4 w-4" />
-                <span>{t.footer.mondayToFriday}</span>
+                <MessageCircle className="h-4 w-4 text-primary" />
+                <span>{t.footer.whatsappAvailable}</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/70">
-                <Clock className="h-4 w-4" />
-                <span>{t.footer.saturday}</span>
+                <Phone className="h-4 w-4 text-primary" />
+                <span>{t.footer.phoneAvailable}</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/70">
-                <Clock className="h-4 w-4" />
-                <span>{t.footer.sunday}</span>
+                <Shield className="h-4 w-4 text-primary" />
+                <span>{t.footer.warrantyInfo}</span>
               </li>
             </ul>
           </div>
           
-          <div>
+          <div className="md:ml-14 lg:ml-16">
             <h3 className="font-semibold text-secondary-foreground mb-4">{t.footer.links}</h3>
             <ul className="space-y-2">
               <li>

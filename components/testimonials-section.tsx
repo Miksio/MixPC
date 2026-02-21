@@ -8,7 +8,7 @@ const testimonials = [
   {
     name: "Zuzanna J.",
     location: "Gdańsk",
-    text: "Laptop nie włączał się od tygodnia. Pan przyjechał w godzinę, wymienił dysk i wszystko działa jak nowe. Polecam.",
+    text: "Od jakiegoś czasu miałam problem z laptopem. Po około godziny od zadzwonienia przyjechał serwisant, zdiagnozował problem, zamówił odpowiedni dysk i po wymianie laptop działa jak nowy. Polecam.",
     rating: 5
   },
   {
@@ -20,13 +20,35 @@ const testimonials = [
   {
     name: "Jędrzej S.",
     location: "Gdańsk",
-    text: "Po wymianie dysku komputer chodzi na prawde szybko. Rozsądna cena i super serwis.",
+    text: "Zamówiłem komputer w określonym budżecie. Dostałem listę części dopasowaną do moich potrzeb i krótkie wytłumaczenie, co warto wybrać. Po złożeniu komputer został przywieziony do domu gotowy do uruchomienia — wszystko działa bez problemu. Polecam.",
+    rating: 5
+  }
+]
+
+const testimonials_en = [
+  {
+    name: "Zuzanna J.",
+    location: "Gdańsk",
+    text: "I had issues with my laptop for some time. About an hour after calling, a technician arrived, diagnosed the problem, ordered the right drive and after the replacement my laptop works like new. Highly recommended.",
+    rating: 5
+  },
+  {
+    name: "Bartek K.",
+    location: "Gdynia",
+    text: "I couldn't connect my printer to the computer. One phone call and the technician connected remotely to my laptop and fixed the problem in under 10 minutes.",
+    rating: 5
+  },
+  {
+    name: "Jędrzej S.",
+    location: "Gdańsk",
+    text: "I ordered a PC within a set budget. I received a parts list tailored to my needs and a short explanation of what to choose. After assembly the PC was delivered to my home ready to use — everything works perfectly. Recommended.",
     rating: 5
   }
 ]
 
 export function TestimonialsSection() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const activeTestimonials = language === "en" ? testimonials_en : testimonials
   return (
     <section id="opinie" className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4">
@@ -37,10 +59,13 @@ export function TestimonialsSection() {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {t.testimonials.subtitle}
           </p>
+          {language === "en" && t.testimonials.translatedNote ? (
+            <p className="text-xs text-muted-foreground/60 mt-2">{t.testimonials.translatedNote}</p>
+          ) : null}
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {testimonials.map((testimonial) => (
+          {activeTestimonials.map((testimonial) => (
             <Card key={testimonial.name} className="relative">
               <CardContent className="p-6">
                 <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/20" />

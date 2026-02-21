@@ -24,7 +24,7 @@ export const translations = {
       phone: "+48 123 456 789",
     },
     hero: {
-      arrival: "Dojazd w ciągu 60 minut",
+      arrival: "Kontakt 24/7",
       titlePart1: "Mobilny serwis komputerowy z",
       titleHighlight: "dojazdem do Ciebie",
       subtitle:
@@ -103,7 +103,7 @@ export const translations = {
         ssd: { service: "Wymiana dysku na SSD", price: "od 80 zł", note: "bez ceny dysku" },
         remote: { service: "Zdalna pomoc", price: "od 100 zł", note: "szybkie wsparcie online" },
         repair: { service: "Naprawa laptopa", price: "od 150 zł", note: "zależnie od usterki" },
-        travel: { service: "Dojazd do klienta", price: "od 30 zł", note: "zależnie od lokalizacji" },
+        travel: { service: "Dojazd do klienta", price: "od 0 zł", note: "zależnie od lokalizacji" },
       },
       askPrice: "Potrzebujesz wyceny indywidualnej? Zadzwoń, chętnie pomożemy!",
       askButton: "Zapytaj o cenę",
@@ -111,13 +111,14 @@ export const translations = {
     testimonials: {
       title: "Opinie klientów",
       subtitle: "Zobacz, co mówią o nas nasi zadowoleni klienci",
+      translatedNote: "",
     },
     cta: {
       title: "Potrzebujesz pomocy?",
       description:
-        "Zadzwoń teraz i umów się na wizytę. Jesteśmy dostępni od poniedziałku do soboty.",
+        "Zadzwoń teraz i umów się na wizytę. Jesteśmy dostępni od poniedziałku do niedzieli.",
       whatsapp: "Napisz na WhatsApp",
-      hours: "Pn-Pt: 8:00-20:00 | Sb: 9:00-16:00",
+      hours: "Możesz do nas dzwonić 24/7",
     },
     faq: {
       title: "Często zadawane pytania",
@@ -161,11 +162,18 @@ export const translations = {
       description:
         "Profesjonalny mobilny serwis komputerowy z dojazdem do klienta. Szybko, tanio i skutecznie.",
       contact: "Kontakt",
-      hours: "Godziny pracy",
+      phone24_7: "Kontakt telefoniczny: 24/7",
+      availability: "Dostępność",
+      available247: "Kontakt 24/7",
+      available247Desc: "Dostępni cały tydzień, przez całą dobę.",
+      whatsappAvailable: "WhatsApp – szybkie odpowiedzi",
+      phoneAvailable: "Telefon – zadzwoń o dowolnej porze",
+      warrantyInfo: "Gwarancja na każdą naprawę",
+      /*hours: "Godziny pracy",*/
       links: "Szybkie linki",
-      mondayToFriday: "Pn-Pt: 8:00-20:00",
-      saturday: "Sobota: 9:00-16:00",
-      sunday: "Niedziela: zamknięte",
+      /*mondayToFriday: "Pn-Pt: 8:00-20:00",*/
+      /*saturday: "Sobota: 9:00-16:00",
+      sunday: "Niedziela: zamknięte",*/
       copyright: "© {year} MixPC. Wszystkie prawa zastrzeżone.",
       email: "kontakt@MixPC.pl",
       location: "Trójmiasto, Polska",
@@ -186,7 +194,7 @@ export const translations = {
       services: "Services",
       how: "How it works",
       pricing: "Pricing",
-      testimonials: "Testimonials",
+      testimonials: "Reviews",
       faq: "FAQ",
     },
     call: {
@@ -194,7 +202,7 @@ export const translations = {
       phone: "+48 123 456 789",
     },
     hero: {
-      arrival: "Arrival within 60 minutes",
+      arrival: "24/7 Contact",
       titlePart1: "Mobile computer service with",
       titleHighlight: "on-site visits",
       subtitle:
@@ -213,7 +221,7 @@ export const translations = {
       items: [
         {
           title: "Laptop repair",
-          description: "Screen, keyboard, battery replacement. Motherboard repairs.",
+          description: "Screen, keyboard, battery replacement, motherboard repairs.",
         },
         {
           title: "Computer repair",
@@ -222,7 +230,7 @@ export const translations = {
         {
           title: "Remote support",
           description:
-            "Quick support over the internet: I connect to your computer and solve the problem remotely.",
+            "Quick support over the internet: We connect to your computer and solve the problem remotely.",
         },
         {
           title: "Virus removal",
@@ -279,15 +287,16 @@ export const translations = {
       askButton: "Ask for price",
     },
     testimonials: {
-      title: "Testimonials",
+      title: "Reviews",
       subtitle: "See what our satisfied customers say",
+      translatedNote: "Note: these reviews were translated from Polish.",
     },
     cta: {
       title: "Need help?",
       description:
-        "Call now and schedule a visit. We are available Monday to Saturday.",
+        "Call now and schedule a visit. We are available Monday to Sunday.",
       whatsapp: "Message on WhatsApp",
-      hours: "Mon-Fri: 8:00-20:00 | Sat: 9:00-16:00",
+      hours: "You can call us 24/7",
     },
     faq: {
       title: "Frequently asked questions",
@@ -306,14 +315,14 @@ export const translations = {
     serviceArea: {
       title: "Service area",
       description:
-        "We travel to customers across the tricity. Most visits are scheduled the same or next working day.",
+        "We travel to customers across tricity area. Most visits are scheduled the same or next working day.",
       items: {
         main: {
           title: "Main city + surroundings",
           description: "Gdańsk, Gdynia, Sopot and surroundings up to 30 km",
         },
         price: {
-          title: "Travel from 30 PLN",
+          title: "Travel from 0 PLN",
           description: "Travel cost depends on distance. Often free in the city center!",
         },
         express: {
@@ -331,11 +340,18 @@ export const translations = {
       description:
         "Professional mobile computer service with on-site visits. Fast, affordable, and effective.",
       contact: "Contact",
-      hours: "Opening hours",
+      phone24_7: "Phone contact: 24/7",
+      availability: "Availability",
+      available247: "Contact 24/7",
+      available247Desc: "Available all week, 24 hours a day.",
+      whatsappAvailable: "WhatsApp – instant replies",
+      phoneAvailable: "Phone – call us anytime",
+      warrantyInfo: "Warranty on every repair",
+      /*hours: "Opening hours",*/
       links: "Quick links",
-      mondayToFriday: "Mon-Fri: 8:00-20:00",
-      saturday: "Saturday: 9:00-16:00",
-      sunday: "Sunday: closed",
+      /*mondayToFriday: "Mon-Fri: 8:00-20:00",
+      saturday: "Saturday: 9:00-16:00",*/
+      /*sunday: "Sunday: closed",*/
       copyright: "© {year} MixPC. All rights reserved.",
       email: "kontakt@MixPC.pl",
       location: "Tricity, Poland",
