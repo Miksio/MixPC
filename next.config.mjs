@@ -7,8 +7,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/MixPC",
-  assetPrefix: "/MixPC/",
   trailingSlash: true,
   turbopack: {
     // Ensure Turbopack selects this project root when multiple lockfiles exist
@@ -22,9 +20,6 @@ const nextConfig = {
     'http://192.168.101.9:3000',
     'http://192.168.101.9:3001'
   ],
-  env: {
-    NEXT_PUBLIC_BASE_PATH: "/MixPC",
-  },
 }
 
 export default nextConfig
