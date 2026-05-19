@@ -33,7 +33,7 @@ export function HeroSection() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button asChild size="lg" className="text-base px-8">
-              <a href="tel:+48123456789">
+              <a href="tel:+48691321515">
                 <Phone className="mr-2 h-5 w-5" />
                 {t.call.callNow}
               </a>

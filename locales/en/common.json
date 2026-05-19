@@ -65,15 +65,38 @@
   "pricing": {
     "title": "Pricing",
     "description": "Clear prices without hidden costs. Final estimate always before repair.",
-    "cardTitle": "Sample prices",
-    "items": {
-      "diagnostics": { "service": "Computer diagnostics", "note": "free with repair" },
-      "install": { "service": "Windows installation", "note": "including configuration" },
-      "clean": { "service": "Laptop cleaning", "note": "thermal paste + cleaning" },
-      "virus": { "service": "Virus removal", "note": "full cleanup" },
-      "ssd": { "service": "SSD upgrade", "note": "without disk price" },
-      "repair": { "service": "Laptop repair", "note": "depending on fault" },
-      "travel": { "service": "On-site visit", "note": "depending on location" }
+    "categories": {
+      "desktops": {
+        "title": "Desktop Computers",
+        "items": [
+          { "service": "Computer diagnostics", "price": "Free", "note": "free with repair" },
+          { "service": "Windows/Linux installation", "price": "from 150 PLN", "note": "including configuration" },
+          { "service": "SSD upgrade", "price": "from 80 PLN", "note": "without disk price" },
+          { "service": "Component replacement (RAM, GPU etc.)", "price": "from 50 PLN", "note": "without component price" },
+          { "service": "Custom PC assembly", "price": "from 200 PLN", "note": "without component price" },
+          { "service": "Virus removal", "price": "from 120 PLN", "note": "full system cleanup" }
+        ]
+      },
+      "laptops": {
+        "title": "Laptops",
+        "items": [
+          { "service": "Laptop cleaning", "price": "from 100 PLN", "note": "thermal paste + cleaning" },
+          { "service": "Screen replacement", "price": "from 200 PLN", "note": "without screen price" },
+          { "service": "Keyboard replacement", "price": "from 120 PLN", "note": "without keyboard price" },
+          { "service": "Battery replacement", "price": "from 80 PLN", "note": "without battery price" },
+          { "service": "Charging port repair", "price": "from 150 PLN", "note": "soldering / replacement" },
+          { "service": "Motherboard repair", "price": "from 250 PLN", "note": "individual replacement" }
+        ]
+      },
+      "other": {
+        "title": "Other services",
+        "items": [
+          { "service": "Remote support", "price": "from 50 PLN", "note": "quick online assistance" },
+          { "service": "Data recovery", "price": "from 200 PLN", "note": "individual quote" },
+          { "service": "Office software installation", "price": "from 50 PLN", "note": "MS Office, LibreOffice" },
+          { "service": "On-site visit", "price": "from 20 PLN", "note": "Downtown Gdańsk — free" }
+        ]
+      }
     },
     "askPrice": "Need a custom quote? Call us, we will help!",
     "askButton": "Ask for price"
@@ -98,7 +121,7 @@
     "description": "We travel to customers across the tricity. Most visits are scheduled the same or next working day.",
     "items": {
       "main": { "title": "Main city + surroundings", "description": "Gdańsk, Gdynia, Sopot and surroundings up to 30 km" },
-      "price": { "title": "Travel from 30 PLN", "description": "Travel cost depends on distance. Often free in the city center!" },
+      "price": { "title": "Travel from 20 PLN", "description": "Travel cost depends on distance. Downtown Gdańsk — free!" },
       "express": { "title": "Express arrival", "description": "Urgent cases? Possible arrival within 1-2 hours of reporting." }
     },
     "map": {

@@ -21,14 +21,32 @@ export const translations = {
     },
     call: {
       callNow: "Zadzwoń teraz",
-      phone: "+48 123 456 789",
+      phone: "+48 691 321 515",
+    },
+    contactForm: {
+      contactUs: "Skontaktuj się z nami",
+      getQuote: "Poproś o wycenę",
+      title: "Formularz kontaktowy",
+      description: "Wypełnij formularz, a skontaktujemy się z Tobą tak szybko, jak to możliwe.",
+      name: "Imię i nazwisko",
+      namePlaceholder: "Wpisz swoje imię i nazwisko",
+      email: "Adres e-mail",
+      emailPlaceholder: "Wpisz swój adres e-mail",
+      phone: "Numer telefonu",
+      phonePlaceholder: "Wpisz swój numer telefonu",
+      message: "Wiadomość",
+      messagePlaceholder: "Opisz, w czym możemy pomóc",
+      submit: "Wyślij wiadomość",
+      sending: "Wysyłanie...",
+      success: "Wiadomość została wysłana.",
+      error: "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę lub zadzwoń do nas.",
     },
     hero: {
       arrival: "Kontakt 24/7",
       titlePart1: "Mobilny serwis komputerowy z",
       titleHighlight: "dojazdem do Ciebie",
       subtitle:
-        "Naprawiamy komputery, laptopy i telefony. Przyjeżdżamy do domu lub biura. Bez stresu, bez kolejek, bez wychodzenia z domu.",
+        "Naprawiamy komputery i laptopy. Przyjeżdżamy do domu lub biura. Bez stresu, bez kolejek, bez wychodzenia z domu.",
       seePricing: "Zobacz cennik",
       benefits: {
         freeEstimate: "Bezpłatna wycena",
@@ -43,7 +61,7 @@ export const translations = {
       items: [
         {
           title: "Naprawa laptopów",
-          description: "Wymiana matrycy, klawiatury, baterii. Naprawy płyt głównych.",
+          description: "Wymiana matrycy, klawiatury, baterii. Przywracanie ustawień fabrycznych.",
         },
         {
           title: "Naprawa komputerów",
@@ -81,7 +99,7 @@ export const translations = {
         "2": {
           title: "Naprawiamy",
           description:
-            "Przyjeżdżamy pod wskazany adres. Diagnozujemy i naprawiamy sprzęt na miejscu lub zabieramy do serwisu.",
+            "Przyjeżdżamy i diagnozujemy sprzęt. W razie potrzeby odbieramy go do serwisu, a następnie odwozimy sprawny.",
         },
         "3": {
           title: "Gotowe!",
@@ -94,19 +112,42 @@ export const translations = {
       title: "Cennik usług",
       description:
         "Przejrzyste ceny bez ukrytych kosztów. Ostateczna wycena zawsze przed naprawą.",
-      cardTitle: "Przykładowe ceny",
-      items: {
-        diagnostics: { service: "Diagnostyka komputera", price: "0 zł", note: "bezpłatnie przy naprawie" },
-        install: { service: "Instalacja systemu Windows", price: "od 150 zł", note: "wraz z konfiguracją" },
-        clean: { service: "Czyszczenie laptopa", price: "od 100 zł", note: "termopasty + dmuchanie" },
-        virus: { service: "Usunięcie wirusów", price: "od 120 zł", note: "pełne czyszczenie" },
-        ssd: { service: "Wymiana dysku na SSD", price: "od 80 zł", note: "bez ceny dysku" },
-        remote: { service: "Zdalna pomoc", price: "od 100 zł", note: "szybkie wsparcie online" },
-        repair: { service: "Naprawa laptopa", price: "od 150 zł", note: "zależnie od usterki" },
-        travel: { service: "Dojazd do klienta", price: "od 0 zł", note: "zależnie od lokalizacji" },
-      },
-      askPrice: "Potrzebujesz wyceny indywidualnej? Zadzwoń, chętnie pomożemy!",
-      askButton: "Zapytaj o cenę",
+      categories: [
+        {
+          name: "Komputery stacjonarne",
+          items: [
+            { service: "Diagnostyka komputera", price: "0 zł", note: "bezpłatnie przy naprawie" },
+            { service: "Instalacja systemu Windows/Linux", price: "od 150 zł", note: "wraz z konfiguracją" },
+            { service: "Wymiana dysku na SSD", price: "od 80 zł", note: "bez ceny dysku" },
+            { service: "Wymiana podzespołów (RAM, GPU itp.)", price: "od 100 zł", note: "bez ceny podzespołów" },
+            { service: "Składanie komputera na zamówienie", price: "od 200 zł", note: "bez ceny podzespołów" },
+            { service: "Usunięcie wirusów", price: "od 120 zł", note: "pełne czyszczenie systemu" },
+          ],
+        },
+        {
+          name: "Laptopy",
+          items: [
+            { service: "Czyszczenie laptopa", price: "od 100 zł", note: "termopasty + dmuchanie" },
+            { service: "Wymiana matrycy / ekranu", price: "od 200 zł", note: "bez ceny matrycy" },
+            { service: "Wymiana klawiatury", price: "od 150 zł", note: "bez ceny klawiatury" },
+            { service: "Wymiana baterii", price: "od 100 zł", note: "bez ceny baterii" },
+            { service: "Naprawa gniazda ładowania", price: "od 150 zł", note: "lutowanie / wymiana" },
+            { service: "Reset systemu (stan fabryczny)", price: "od 150 zł", note: "reset systemu + sterowniki + podstawowa konfiguracja" },
+          ],
+        },
+        {
+          name: "Inne usługi",
+          items: [
+            { service: "Zdalna pomoc", price: "od 50 zł", note: "szybkie wsparcie online" },
+            { service: "Odzyskiwanie danych z dysku", price: "od 200 zł", note: "wycena indywidualna" },
+            { service: "Instalacja pakietu biurowego", price: "od 50 zł", note: "MS Office, LibreOffice" },
+            { service: "Dojazd do klienta", price: "od 20 zł", note: "Śródmieście Gdańska — gratis" },
+          ],
+        },
+      ],
+      customQuote: "Potrzebujesz wyceny indywidualnej? Zadzwoń, chętnie pomożemy!",
+      disclaimer: "*Cena zależy od stanu sprzętu, czasu pracy i modelu urządzenia.",
+      askPrice: "Zapytaj o cenę",
     },
     testimonials: {
       title: "Opinie klientów",
@@ -120,18 +161,21 @@ export const translations = {
       whatsapp: "Napisz na WhatsApp",
       hours: "Możesz do nas dzwonić 24/7",
     },
+    thankYou: {
+      title: "Dziękujemy za wiadomość",
+      message: "Otrzymaliśmy Twoje zgłoszenie i skontaktujemy się z Tobą tak szybko, jak to możliwe.",
+      backHome: "Wróć na stronę główną",
+    },
     faq: {
       title: "Często zadawane pytania",
       description: "Odpowiedzi na najczęściej zadawane pytania",
       items: [
-        { question: "Jak szybko możecie przyjęchać?", answer: "W większości przypadków jesteśmy w stanie przyjęchać tego samego dnia lub następnego dnia roboczego. W pilnych sprawach możliwy jest dojazd ekspresowy w ciągu 1-2 godzin." },
+        { question: "Jak szybko możecie przyjechać?", answer: "W większości przypadków jesteśmy w stanie przyjechać tego samego dnia lub następnego dnia roboczego. W pilnych sprawach możliwy jest dojazd ekspresowy w ciągu 1-2 godzin." },
         { question: "Ile kosztuje dojazd?", answer: "Dojazd w obrębie centrum miasta często jest gratis. Poza centrum cena zaczyna się od 30 zł i zależy od odległości. Dokładną cenę podajemy przy umawianiu wizyty." },
         { question: "Czy mogę zapłacić kartą?", answer: "Tak, akceptujemy płatność gotówką, kartą oraz BLIK. Płatność następuje dopiero po wykonanej naprawie." },
         { question: "Czy dajecie gwarancję na naprawę?", answer: "Tak, na wszystkie naprawy udzielamy gwarancji. Standardowo jest to 3 miesięce, a na wymienione części obowiązuje gwarancja producenta." },
         { question: "Co jeśli sprzęt nie da się naprawic na miejscu?", answer: "W takim przypadku możemy zabrać sprzęt do naszego serwisu i dostarczą go po naprawie. Transport w obie strony jest wliczony w cenę usługi." },
-        { question: "Czy naprawiacie komputery Apple / Mac?", answer: "Tak, naprawiamy również komputery Apple - MacBooki, iMaki oraz Mac Mini. Instalujemy też systemy macOS oraz wykonujemy diagnostykę." },
         { question: "Czy muszę płacić jeśli naprawa się nie uda?", answer: "Nie. Jeśli nie uda się naprawic sprzętu, płacisz tylko za diagnostykę (jeśli była płatna). Wycemę podajemy zawsze przed rozpoczęciem naprawy." },
-        { question: "Czy wystawiacie faktury?", answer: "Tak, wystawiamy faktury VAT dla firm oraz paragony dla klientów indywidualnych. Prosimy o informację przy umawianiu wizyty." },
       ],
     },
     serviceArea: {
@@ -144,8 +188,8 @@ export const translations = {
           description: "Gdańsk, Gdynia, Sopot i okolice do 30 km",
         },
         price: {
-          title: "Dojazd od 30 zł",
-          description: "Cena dojazdu zależna od odległości. W centrum często gratis!",
+          title: "Dojazd od 20 zł",
+          description: "Cena dojazdu zależna od odległości. Śródmieście Gdańska — gratis!",
         },
         express: {
           title: "Ekspresowy dojazd",
@@ -199,14 +243,32 @@ export const translations = {
     },
     call: {
       callNow: "Call now",
-      phone: "+48 123 456 789",
+      phone: "+48 691 321 515",
+    },
+    contactForm: {
+      contactUs: "Contact us",
+      getQuote: "Get a quote",
+      title: "Contact form",
+      description: "Fill out the form and we will get back to you as soon as possible.",
+      name: "Full name",
+      namePlaceholder: "Enter your full name",
+      email: "Email address",
+      emailPlaceholder: "Enter your email address",
+      phone: "Phone number",
+      phonePlaceholder: "Enter your phone number",
+      message: "Message",
+      messagePlaceholder: "Describe how we can help",
+      submit: "Send message",
+      sending: "Sending...",
+      success: "Your message has been sent.",
+      error: "We could not send your message. Please try again in a moment or call us.",
     },
     hero: {
       arrival: "24/7 Contact",
       titlePart1: "Mobile computer service with",
       titleHighlight: "on-site visits",
       subtitle:
-        "We repair computers, laptops and phones. We come to your home or office. No stress, no queues, no need to leave your home.",
+        "We repair computers and laptops. We come to your home or office. No stress, no queues, no need to leave your home.",
       seePricing: "See pricing",
       benefits: {
         freeEstimate: "Free estimate",
@@ -221,7 +283,7 @@ export const translations = {
       items: [
         {
           title: "Laptop repair",
-          description: "Screen, keyboard, battery replacement, motherboard repairs.",
+          description: "Screen, keyboard, battery replacement, factory reset.",
         },
         {
           title: "Computer repair",
@@ -259,7 +321,7 @@ export const translations = {
         "2": {
           title: "We repair",
           description:
-            "We come to the address provided. We diagnose and repair on-site or take the device to the service.",
+            "We come and diagnose the device. If needed, we take it to the workshop and deliver it back fixed.",
         },
         "3": {
           title: "Done!",
@@ -272,19 +334,43 @@ export const translations = {
       title: "Pricing",
       description:
         "Clear prices without hidden costs. Final estimate always before repair.",
-      cardTitle: "Sample prices",
-      items: {
-        diagnostics: { service: "Computer diagnostics", price: "0 PLN", note: "free with repair" },
-        install: { service: "Windows installation", price: "from 150 PLN", note: "including configuration" },
-        clean: { service: "Laptop cleaning", price: "from 100 PLN", note: "thermal paste + cleaning" },
-        virus: { service: "Virus removal", price: "from 120 PLN", note: "full cleanup" },
-        ssd: { service: "SSD upgrade", price: "from 80 PLN", note: "without disk price" },
-        remote: { service: "Remote support", price: "from 100 PLN", note: "quick online support" },
-        repair: { service: "Laptop repair", price: "from 150 PLN", note: "depending on fault" },
-        travel: { service: "On-site visit", price: "from 30 PLN", note: "depending on location" },
-      },
-      askPrice: "Need a custom quote? Call us, we will help!",
-      askButton: "Ask for price",
+      categories: [
+        {
+          name: "Desktop Computers",
+          items: [
+            { service: "Computer diagnostics", price: "Free", note: "free with repair" },
+            { service: "Windows/Linux installation", price: "from 150 PLN", note: "including configuration" },
+            { service: "SSD upgrade", price: "from 80 PLN", note: "without disk price" },
+            { service: "Component replacement (RAM, GPU etc.)", price: "from 100 PLN", note: "without component price" },
+            { service: "Custom PC assembly", price: "from 200 PLN", note: "without component price" },
+            { service: "Virus removal", price: "from 120 PLN", note: "full system cleanup" },
+          ],
+        },
+        {
+          name: "Laptops",
+          items: [
+            { service: "Laptop cleaning", price: "from 100 PLN", note: "thermal paste + cleaning" },
+            { service: "Screen replacement", price: "from 200 PLN", note: "without screen price" },
+            { service: "Keyboard replacement", price: "from 150 PLN", note: "without keyboard price" },
+            { service: "Battery replacement", price: "from 100 PLN", note: "without battery price" },
+            { service: "Charging port repair", price: "from 150 PLN", note: "soldering / replacement" },
+            { service: "System reset (factory reset)", price: "from 150 PLN", note: "system reset + drivers + basic configuration" },
+          ],
+        },
+        {
+          name: "Other services",
+          items: [
+            { service: "Remote support", price: "from 50 PLN", note: "quick online assistance" },
+            { service: "Data recovery", price: "from 200 PLN", note: "individual quote" },
+            { service: "Office software installation", price: "from 50 PLN", note: "MS Office, LibreOffice" },
+            { service: "On-site visit", price: "from 20 PLN", note: "Downtown Gdańsk — free" },
+          ],
+        },
+
+      ],
+      customQuote: "Need a custom quote? Call us, we will help!",
+      disclaimer: "*Price depends on device condition, work time and model.",
+      askPrice: "Ask for price",
     },
     testimonials: {
       title: "Reviews",
@@ -298,6 +384,11 @@ export const translations = {
       whatsapp: "Message on WhatsApp",
       hours: "You can call us 24/7",
     },
+    thankYou: {
+      title: "Thank you for your message",
+      message: "We have received your inquiry and will get back to you as soon as possible.",
+      backHome: "Back to home",
+    },
     faq: {
       title: "Frequently asked questions",
       description: "Answers to the most commonly asked questions",
@@ -307,9 +398,7 @@ export const translations = {
         { question: "Can I pay by card?", answer: "Yes, we accept cash, card, and BLIK payments. Payment is made only after the repair is completed." },
         { question: "Do you provide a warranty?", answer: "Yes, all repairs come with a warranty. The standard is 3 months, and replaced parts carry the manufacturer's warranty." },
         { question: "What if the device can't be fixed on-site?", answer: "In that case, we can take the device to our workshop and deliver it back after repair. Round-trip transport is included in the service price." },
-        { question: "Do you repair Apple / Mac computers?", answer: "Yes, we also repair Apple devices - MacBooks, iMacs, and Mac Minis. We also install macOS and perform diagnostics." },
         { question: "Do I have to pay if the repair fails?", answer: "No. If we can't fix the device, you only pay for diagnostics (if applicable). We always provide a quote before starting the repair." },
-        { question: "Do you issue invoices?", answer: "Yes, we issue VAT invoices for businesses and receipts for individual customers. Please let us know when scheduling your visit." },
       ],
     },
     serviceArea: {
@@ -322,8 +411,8 @@ export const translations = {
           description: "Gdańsk, Gdynia, Sopot and surroundings up to 30 km",
         },
         price: {
-          title: "Travel from 0 PLN",
-          description: "Travel cost depends on distance. Often free in the city center!",
+          title: "Travel from 20 PLN",
+          description: "Travel cost depends on distance. Downtown Gdańsk — free!",
         },
         express: {
           title: "Express arrival",

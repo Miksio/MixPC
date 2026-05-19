@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
+import { ContactFormModal } from "@/components/contract-form-modal"
 import { Phone, Menu, X, ChevronDown } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import type { Language } from "@/lib/translations"
@@ -64,7 +65,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <a href="/MixPC/" className="flex items-center">
+            <a href="/" className="flex items-center">
               <img src="mixpc_logo.png" alt="MixPC" className="h-14 w-auto object-contain" />
             </a>
           </div>
@@ -88,17 +89,20 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <a href="tel:+48123456789" className="hidden sm:flex items-center gap-2 text-sm font-semibold text-secondary">
+            <a href="tel:+48691321515" className="hidden sm:flex items-center gap-2 text-sm font-semibold text-secondary">
               <Phone className="h-4 w-4" />
               {t.call.phone}
             </a>
 
-            <Button asChild className="hidden sm:inline-flex">
-              <a href="tel:+48123456789">
-                <Phone className="mr-2 h-4 w-4" />
-                {t.call.callNow}
-              </a>
-            </Button>
+            <div className="hidden sm:flex items-center gap-2">
+              <ContactFormModal triggerVariant="outline" triggerLabel="contactUs" />
+              <Button asChild>
+                <a href="tel:+48691321515">
+                  <Phone className="mr-2 h-4 w-4" />
+                  {t.call.callNow}
+                </a>
+              </Button>
+            </div>
 
             <Button
               variant="ghost"
@@ -187,16 +191,19 @@ export function Header() {
               >
                 {t.nav.faq}
               </a>
-              <a href="tel:+48123456789" className="flex items-center gap-2 py-2 text-sm font-semibold text-secondary">
+              <a href="tel:+48691321515" className="flex items-center gap-2 py-2 text-sm font-semibold text-secondary">
                 <Phone className="h-4 w-4" />
                 {t.call.phone}
               </a>
-              <Button asChild className="mt-2">
-                <a href="tel:+48123456789">
-                  <Phone className="mr-2 h-4 w-4" />
-                  {t.call.callNow}
-                </a>
-              </Button>
+              <div className="mt-2 flex flex-col gap-2">
+                <ContactFormModal triggerVariant="outline" triggerLabel="contactUs" triggerClassName="w-full" />
+                <Button asChild>
+                  <a href="tel:+48691321515">
+                    <Phone className="mr-2 h-4 w-4" />
+                    {t.call.callNow}
+                  </a>
+                </Button>
+              </div>
             </div>
           </nav>
         )}

@@ -7,8 +7,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/MixPC",
-  assetPrefix: "/MixPC/",
+  // basePath: "/MixPC",
+  // assetPrefix: "/MixPC/",
   trailingSlash: true,
   turbopack: {
     // Ensure Turbopack selects this project root when multiple lockfiles exist

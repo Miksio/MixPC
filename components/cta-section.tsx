@@ -20,13 +20,13 @@ export function CtaSection() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="secondary" className="text-base px-8">
-              <a href="tel:+48123456789">
+              <a href="tel:+48691321515">
                 <Phone className="mr-2 h-5 w-5" />
                 {t.call.phone}
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent">
-              <a href="https://wa.me/48692662206" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/691321515" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 {t.cta.whatsapp}
               </a>

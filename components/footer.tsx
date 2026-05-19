@@ -1,5 +1,5 @@
 'use client'
-import { Headphones, MessageCircle, Phone, Shield, Mail, MapPin } from "lucide-react"
+import { Headphones, MessageCircle, Phone, Shield, Mail, MapPin, Facebook, Instagram } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function Footer() {
@@ -17,19 +17,39 @@ export function Footer() {
             <p className="text-secondary-foreground/70 text-sm">
               {t.footer.description}
             </p>
+            <div className="flex items-center gap-3 mt-4">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61573364443192" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://instagram.com/mixpc_" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
           </div>
           
           <div>
             <h3 className="font-semibold text-secondary-foreground mb-4">{t.footer.contact}</h3>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+48123456789" className="flex items-center gap-2 text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                <a href="tel:+48691321515" className="flex items-center gap-2 text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                   <Phone className="h-4 w-4" />
-                  +48 123 456 789
+                  +48 691 321 515
                 </a>
               </li>
               <li>
-                <a href="mailto:kontakt@techpomoc.pl" className="flex items-center gap-2 text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                <a href="mailto:kontakt@mixpc.pl" className="flex items-center gap-2 text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                   <Mail className="h-4 w-4" />
                   kontakt@MixPC.pl
                 </a>

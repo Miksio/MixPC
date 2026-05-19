@@ -45,7 +45,7 @@
     "title": "Nasze usługi",
     "description": "Oferujemy kompleksowe usługi naprawy i serwisu sprzętu komputerowego. Wszystko z dojazdem do klienta.",
     "items": {
-      "laptop": { "title": "Naprawa laptopów", "description": "Wymiana matrycy, klawiatury, baterii. Naprawy płyt głównych." },
+      "laptop": { "title": "Naprawa laptopów", "description": "Wymiana matrycy, klawiatury, baterii. Przywracanie ustawień fabrycznych." },
       "computer": { "title": "Naprawa komputerów", "description": "Diagnostyka, wymiana podzespołów, modernizacja sprzętu." },
       "phone": { "title": "Naprawa telefonów", "description": "Wymiana wyświetlacza, baterii, gniazda ładowania." },
       "virus": { "title": "Usuwanie wirusów", "description": "Czyszczenie systemu, instalacja antywirusa, zabezpieczenie danych." },
@@ -65,15 +65,38 @@
   "pricing": {
     "title": "Cennik usług",
     "description": "Przejrzyste ceny bez ukrytych kosztów. Ostateczna wycena zawsze przed naprawą.",
-    "cardTitle": "Przykładowe ceny",
-    "items": {
-      "diagnostics": { "service": "Diagnostyka komputera", "note": "bezpłatnie przy naprawie" },
-      "install": { "service": "Instalacja systemu Windows", "note": "wraz z konfiguracją" },
-      "clean": { "service": "Czyszczenie laptopa", "note": "termopasty + dmuchanie" },
-      "virus": { "service": "Usunięcie wirusów", "note": "pełne czyszczenie" },
-      "ssd": { "service": "Wymiana dysku na SSD", "note": "bez ceny dysku" },
-      "repair": { "service": "Naprawa laptopa", "note": "zależnie od usterki" },
-      "travel": { "service": "Dojazd do klienta", "note": "zależnie od lokalizacji" }
+    "categories": {
+      "desktops": {
+        "title": "Komputery stacjonarne",
+        "items": [
+          { "service": "Diagnostyka komputera", "price": "0 zł", "note": "bezpłatnie przy naprawie" },
+          { "service": "Instalacja systemu Windows/Linux", "price": "od 150 zł", "note": "wraz z konfiguracją" },
+          { "service": "Wymiana dysku na SSD", "price": "od 80 zł", "note": "bez ceny dysku" },
+          { "service": "Wymiana podzespołów (RAM, GPU itp.)", "price": "od 50 zł", "note": "bez ceny podzespołów" },
+          { "service": "Składanie komputera na zamówienie", "price": "od 200 zł", "note": "bez ceny podzespołów" },
+          { "service": "Usunięcie wirusów", "price": "od 120 zł", "note": "pełne czyszczenie systemu" }
+        ]
+      },
+      "laptops": {
+        "title": "Laptopy",
+        "items": [
+          { "service": "Czyszczenie laptopa", "price": "od 100 zł", "note": "termopasty + dmuchanie" },
+          { "service": "Wymiana matrycy / ekranu", "price": "od 200 zł", "note": "bez ceny matrycy" },
+          { "service": "Wymiana klawiatury", "price": "od 120 zł", "note": "bez ceny klawiatury" },
+          { "service": "Wymiana baterii", "price": "od 80 zł", "note": "bez ceny baterii" },
+          { "service": "Naprawa gniazda ładowania", "price": "od 150 zł", "note": "lutowanie / wymiana" },
+          { "service": "Naprawa płyty głównej", "price": "od 250 zł", "note": "wymiana indywidualna" }
+        ]
+      },
+      "other": {
+        "title": "Inne usługi",
+        "items": [
+          { "service": "Zdalna pomoc", "price": "od 50 zł", "note": "szybkie wsparcie online" },
+          { "service": "Odzyskiwanie danych z dysku", "price": "od 200 zł", "note": "wycena indywidualna" },
+          { "service": "Instalacja pakietu biurowego", "price": "od 50 zł", "note": "MS Office, LibreOffice" },
+          { "service": "Dojazd do klienta", "price": "od 20 zł", "note": "Śródmieście Gdańska — gratis" }
+        ]
+      }
     },
     "askPrice": "Potrzebujesz wyceny indywidualnej? Zadzwoń, chętnie pomożemy!",
     "askButton": "Zapytaj o cenę"
@@ -101,7 +124,7 @@
     "description": "Dojeżdżamy do klientów na terenie trójmiasta. Większość wizyt realizujemy tego samego lub następnego dnia roboczego.",
     "items": {
       "main": { "title": "Główne miasto + okolice", "description": "Gdańsk, Gdynia, Sopot i okolice do 30 km" },
-      "price": { "title": "Dojazd od 30 zł", "description": "Cena dojazdu zależna od odległości. W centrum często gratis!" },
+      "price": { "title": "Dojazd od 20 zł", "description": "Cena dojazdu zależna od odległości. Śródmieście Gdańska — gratis" },
       "express": { "title": "Ekspresowy dojazd", "description": "Pilne sprawy? Możliwy dojazd w ciągu 1-2 godzin od zgłoszenia." }
     },
     "map": {
